@@ -86,6 +86,20 @@ trait HtmlAttrs[A[_]] { this: HtmlAttrBuilder[A] =>
   lazy val stepAttr: A[String] = stringHtmlAttr("step")
 
   /**
+    * The inputmode attribute hints at the type of data that might be entered by
+    * the user while editing the element or its contents. This allows a browser
+    * to display an appropriate virtual keyboard.
+    * 
+    * Acceptable values:
+    * `none` | `text` (default value) | `decimal` | `numeric` | `tel` | `search` | `email` | `url`
+    * 
+    * MDN
+    * 
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode
+    */
+  lazy val inputmode: A[String] = stringHtmlAttr("inputmode")
+  
+  /**
     * This attribute is used to define the type of the content linked to. The
     * value of the attribute should be a MIME type such as text/html, text/css,
     * and so on. The common use of this attribute is to define the type of style
